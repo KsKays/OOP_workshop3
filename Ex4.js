@@ -111,16 +111,20 @@ class Square extends Rectangle {
 
 /* ------ Main ------ */
 const main = () => {
-  const shape = new Shape("blue", true);
+  //Shape
+  const shape = new Shape("Blue", true);
   console.log(shape.toString());
 
-  const circle = new Circle("green", false, 5.0);
+  //Circle
+  const circle = new Circle("Green", false, 5.0);
   console.log(circle.toString());
 
-  const rectangle = new Rectangle("purple", true, 3.0, 7.0);
+  // Rectangle
+  const rectangle = new Rectangle("Red", true, 3.0, 7.0);
   console.log(rectangle.toString());
 
-  const square = new Square("yellow", false, 4.0);
+  // Square
+  const square = new Square("Yellow", false, 4.0);
   console.log(square.toString());
 };
 

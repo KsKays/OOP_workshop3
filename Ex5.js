@@ -94,7 +94,7 @@ const main = () => {
   const customer1 = new Customer("Kays", true, "001");
   console.log(customer1.toString());
 
-  const visit1 = new Visit(customer1, "12/12/2022");
+  const visit1 = new Visit(customer1.name, "12/12/2022");
   visit1.setServiceExpense(50);
   visit1.setProductExpense(30);
   console.log(visit1.toString());

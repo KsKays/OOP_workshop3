@@ -50,7 +50,7 @@ class Student extends Person {
     this.fee = fee;
   }
   toString() {
-    return `Student [Person = [name = ${this.name}, program = ${this.program}, year = ${this.year}, fee = ${this.fee}]]`;
+    return `Student [Person = [name = ${this.name}, address = ${this.address}, program = ${this.program}, year = ${this.year}, fee = ${this.fee}]]`;
   }
 }
 
@@ -81,18 +81,23 @@ class Staff extends Person {
 }
 
 const main = () => {
-  const person1 = new Person("kay", "ban kay");
+  // Customer
+  const person1 = new Person("kay", "kay house");
+
+  // Student
   const student1 = new Student(
-    "kay",
-    "kay house",
+    person1.name,
+    person1.address,
     "software engineer",
     65,
-    1160
+    100
   );
 
-  const staff1 = new Staff("kay", "kay house", "software engineer", 65, 1160);
-
+  //Staff
+  const staff1 = new Staff(person1.name, person1.address, "NPRU", 25000);
+  //console.log(person1.toString());
   console.log(student1.toString());
+  console.log(staff1.toString());
 };
 
 main();
