@@ -50,7 +50,9 @@ class Student extends Person {
     this.fee = fee;
   }
   toString() {
-    return `Student [Person = [name = ${this.name}, address = ${this.address}, program = ${this.program}, year = ${this.year}, fee = ${this.fee}]]`;
+    return `Student [Person = [${super.toString()}, program = ${
+      this.program
+    }, year = ${this.year}, fee = ${this.fee}]]`;
   }
 }
 
@@ -76,7 +78,9 @@ class Staff extends Person {
     this.pay = pay;
   }
   toString() {
-    return `Staff [Person = [name = ${this.name}, address = ${this.address}, school = ${this.school}, pay = ${this.pay}]]`;
+    return `Staff [Person = [${super.toString()}, school = ${
+      this.school
+    }, pay = ${this.pay}]]`;
   }
 }
 

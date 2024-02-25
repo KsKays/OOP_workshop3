@@ -3,9 +3,10 @@ class Author {
   name = "";
   email = "";
   gender = "";
-  constructor(name, email) {
+  constructor(name, email, gender) {
     this.name = name;
     this.email = email;
+    this.gender = gender;
   }
   getName() {
     return this.name;
@@ -17,7 +18,7 @@ class Author {
     this.email = email;
   }
   toString() {
-    return `Author [name = ${this.name}, email = ${this.email}]`;
+    return `Author [name = ${this.name}, email = ${this.email}, gender = ${this.gender}]`;
   }
 }
 
@@ -54,8 +55,7 @@ class Book {
   toString() {
     let authorDetails = "";
     for (let i = 0; i < this.authors.length; i++) {
-      authorDetails +=
-        this.authors[i] + `, gender = ${this.authors[i].gender}]`;
+      authorDetails += this.authors[i] + `, gender = ${this.authors[i]}]`;
       if (i < this.authors.length - 1) {
         authorDetails += ", ";
       }

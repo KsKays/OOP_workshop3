@@ -43,7 +43,7 @@ class Circle extends Shape {
     return 2 * 3.14 * this.radius;
   }
   toString() {
-    return `Circle [Shape[color = ${this.color}, filled = ${this.filled}, radius = ${this.radius}]]`;
+    return `Circle [${super.toString()} radius = ${this.radius}]]`;
   }
 }
 
